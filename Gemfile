@@ -5,15 +5,10 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.8'
 
 # Postgresql adapter
-# This gem forwards to activerecord's default postgresql adapter
-gem 'activerecord-postgresql-adapter', '~> 0.0.1'
-# We need this in addition to the adapter
-# see http://stackoverflow.com/q/2038048/117193
-gem 'pg', '~> 0.14.1'
+gem "activerecord-jdbcpostgresql-adapter", "~> 1.2.2.1"
 
 # Oracle adapter
-gem 'ruby-oci8'
-gem 'activerecord-oracle_enhanced-adapter'
+gem "activerecord-oracle_enhanced-adapter", "~> 1.4.1"
 
 # A JSON implementation as a Ruby extension in C
 # http://flori.github.com/json/

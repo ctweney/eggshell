@@ -24,3 +24,6 @@
 
 # Ignore compiled CSS files (these will be auto-generated on server start)
 app/assets/stylesheets/application.css
+
+# Ignore Oracle driver
+ojdbc6.jar

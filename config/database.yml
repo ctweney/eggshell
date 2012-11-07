@@ -1,5 +1,5 @@
 development:
-  adapter: postgresql
+  adapter: jdbcpostgresql
   database: eggshell_development
   encoding: unicode
   pool: 5
@@ -9,7 +9,7 @@ development:
   host: localhost
 
 production:
-  adapter: postgresql
+  adapter: jdbcpostgresql
   database: eggshell_production
   encoding: unicode
   pool: 5
@@ -25,7 +25,7 @@ production:
 # username will also need to have permission to create and drop
 # databases. This is not a great idea in a shared environment.
 test:
-  adapter: postgresql
+  adapter: jdbcpostgresql
   database: eggshell_test
   encoding: unicode
   pool: 5
@@ -35,8 +35,9 @@ test:
   username: postgres
 
 campusdb:
-  adapter: oracle_enhanced
-  database: <%= ENV['ORACLE_DATABASE'] %>
+  adapter: jdbc
+  driver: oracle.jdbc.OracleDriver
+  url: jdbc:oracle:thin:@<%= ENV['ORACLE_DATABASE'] %>
   username: <%= ENV['ORACLE_USER'] %>
   password: <%= ENV['ORACLE_PASSWORD'] %>
   pool: 5
